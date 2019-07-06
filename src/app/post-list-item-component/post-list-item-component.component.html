@@ -1,0 +1,17 @@
+<a href="#" [ngClass]="getStyle()" class="list-group-item list-group-item-action flex-column align-items-start">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{post.title}}</h5>
+    <small>{{post.created_at | date:short}}</small>
+  </div>
+  <p class="mb-1">{{post.content}}</p>
+  <div class="row">
+    <div class="col-md-1">
+      <button (click)="onLike()"  class="btn btn-success" type="button">like</button>
+    </div>
+    <div class="col-md-1">
+      <button (click)="onDislike()"  class="btn btn-danger" type="button">dislike</button>
+    </div>
+    <div class="col-md-10"></div>
+  </div>
+  <small></small>
+</a>
